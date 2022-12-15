@@ -24,7 +24,7 @@ http://165.227.85.238:3000
 
 Documentation related to each endpoint along with its required configuration and an example can be found below.
 
-### Extract Entities 
+## Extract Entities 
 
 - Endpoint - Append this at the end of base url
 
@@ -120,7 +120,7 @@ http://165.227.85.238:3000/extractEntities
 - 400 = Return syntax error if input array is empty or its content is not of type string.
 - 500 = Internal server error.
 
-### Extract PII Entities
+## Extract PII Entities
 
 - Endpoint - Append this at the end of base url
 
@@ -175,7 +175,7 @@ http://165.227.85.238:3000/extractPiiEntities
 - 400 = Return syntax error if input array is empty or its content is not of type string.
 - 500 = Internal server error.
 
-### Entity Linking
+## Entity Linking
 
 - Endpoint - Append this at the end of base url
 
