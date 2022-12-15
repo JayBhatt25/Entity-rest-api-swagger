@@ -11,12 +11,21 @@ Try it out using [Swagger Playground](http://165.227.85.238:3000/docs/#/)
 
 
 
-## Extract Entities
+## Getting Started
+
+To access this API you will need these 2 things:
 
 - Base URL
 ```http
 http://165.227.85.238:3000
 ```
+
+- An endpoint, that you will append at the end of the base url depending on the operation you would like to perform.
+
+Documentation related to each endpoint along with its required configuration and an example can be found below.
+
+### Extract Entities 
+
 - Endpoint - Append this at the end of base url
 
 ```http
@@ -24,17 +33,28 @@ http://165.227.85.238:3000
 ```
 - Method = **POST**
 
-- Parameter Type = **JSON**
+- Request body format = **JSON**
 
 - Input Type = Array[string]
 
-#### Try it out using this example
+- Output format = **JSON**
 
+#### Try it out using Postman
+
+- Open Postman and create a new http request.
+- Copy this url and paste it into the request's url portion.
+```http
+http://165.227.85.238:3000/extractEntities
+```
+- Select request method type as **POST**
+- Select body data-type as **raw**
+- Set the request body type as **JSON**
+- Copy the example below and include it in your request's body
 ```
 ["Redmond is a city in King County, Washington, United States, located 15 miles east of Seattle."]
 ```
-
-#### Results will look like
+- Click Send.
+- Response data will be in **JSON** format and will look like -
 
 ```no-copy
 [
@@ -94,18 +114,14 @@ http://165.227.85.238:3000
     }
 ]
 ```
-#### Response codes
+#### Response status codes
 
 - 200 = Success
 - 400 = Return syntax error if input array is empty or its content is not of type string.
 - 500 = Internal server error.
 
-## Extract PII Entities
+### Extract PII Entities
 
-- Base URL
-```http
-http://165.227.85.238:3000
-```
 - Endpoint - Append this at the end of base url
 
 ```http
@@ -113,17 +129,27 @@ http://165.227.85.238:3000
 ```
 - Method = **POST**
 
-- Parameter Type = **JSON**
+- Request body Type = **JSON**
 
 - Input Type = Array[string]
 
-#### Try it out using this example
+- Output format = **JSON**
+#### Try it out using Postman
 
+- Open Postman and create a new http request.
+- Copy this url and paste it into the request's url portion.
+```http
+http://165.227.85.238:3000/extractPiiEntities
+```
+- Select request method type as **POST**
+- Select body data-type as **raw**
+- Set the request body type as **JSON**
+- Copy the example below and include it in your request's body
 ```
 ["The employee's SSN is 555-55-5555."]
 ```
-
-#### Results will look like
+- Click Send.
+- Response data will be in **JSON** format and will look like -
 
 ```
 [
@@ -149,12 +175,8 @@ http://165.227.85.238:3000
 - 400 = Return syntax error if input array is empty or its content is not of type string.
 - 500 = Internal server error.
 
-## Entity Linking
+### Entity Linking
 
-- Base URL
-```http
-http://165.227.85.238:3000
-```
 - Endpoint - Append this at the end of base url
 
 ```http
@@ -166,13 +188,23 @@ http://165.227.85.238:3000
 
 - Input Type = Array[string]
 
-#### Try it out using this example
+- Output format = **JSON**
+#### Try it out using Postman
 
+- Open Postman and create a new http request.
+- Copy this url and paste it into the request's url portion.
+```http
+http://165.227.85.238:3000/recognizeLinkedEntities
+```
+- Select request method type as **POST**
+- Select body data-type as **raw**
+- Set the request body type as **JSON**
+- Copy the example below and include it in your request's body
 ```
 ["Microsoft was founded by Bill Gates and Paul Allen."]
 ```
-
-#### Results will look like
+- Click Send.
+- Response data will be in **JSON** format and will look like -
 
 ```
 [
