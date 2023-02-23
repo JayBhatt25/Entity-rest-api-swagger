@@ -6,7 +6,7 @@ This API leverages Azure's Cognitive Service API to provide you with ability to 
 * Extract Pii Entities - Extract Personally Identifiable Information(PII) from text such as Social Security Number, Bank information, credit card numbers, etc.
 * Entity Linking - Identify objects that matches an entry from the knowledge base and extract information such as data source, URL from the input text.
 
-Try it out using [Swagger Playground](http://165.227.85.238:3000/docs/#/)
+Try it out using [Swagger Playground](https://entitynodeapi.azurewebsites.net/docs/)
 
 
 
@@ -17,7 +17,7 @@ To access this API you will need these 2 things:
 
 - Base URL
 ```http
-http://165.227.85.238:3000
+https://entitynodeapi.azurewebsites.net
 ```
 
 - An endpoint, that you will append at the end of the base url depending on the operation you would like to perform.
@@ -44,7 +44,7 @@ Documentation related to each endpoint along with its required configuration and
 - Open Postman and create a new http request.
 - Copy this url and paste it into the request's url portion.
 ```http
-http://165.227.85.238:3000/extractEntities
+https://entitynodeapi.azurewebsites.net/extractEntities
 ```
 - Select request method type as **POST**
 - Select body data-type as **raw**
@@ -139,7 +139,7 @@ http://165.227.85.238:3000/extractEntities
 - Open Postman and create a new http request.
 - Copy this url and paste it into the request's url portion.
 ```http
-http://165.227.85.238:3000/extractPiiEntities
+https://entitynodeapi.azurewebsites.net/extractPiiEntities
 ```
 - Select request method type as **POST**
 - Select body data-type as **raw**
@@ -194,7 +194,7 @@ http://165.227.85.238:3000/extractPiiEntities
 - Open Postman and create a new http request.
 - Copy this url and paste it into the request's url portion.
 ```http
-http://165.227.85.238:3000/recognizeLinkedEntities
+https://entitynodeapi.azurewebsites.net/recognizeLinkedEntities
 ```
 - Select request method type as **POST**
 - Select body data-type as **raw**
